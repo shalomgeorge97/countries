@@ -23,16 +23,14 @@
   </tr>
   <tr>
     <td>Sub region</td>
-    <td>{{ countrydetails.subregion }}</td>
+    <td>{{ countrydetails ? countrydetails.subregion : null }}</td>
   </tr>
   <tr>
     <td>Population</td>
-    <td>{{ countrydetails.population }}</td>
+    <td>{{ countrydetails ? countrydetails.population : null }}</td>
   </tr>
   <tr>
     <td>Area</td>
-    <td>{{ countrydetails.area }} sq km</td>
+    <td>{{ countrydetails ? countrydetails.area : null }} sq km</td>
   </tr>
 </table>
-
-{{ countrydetails[0] }}

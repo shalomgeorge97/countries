@@ -8,7 +8,7 @@ import { CountryService } from "../../services/country.service";
 })
 export class AppHomeComponent implements OnInit {
   countryName: string;
-  public countrydetails = [];
+  public countrydetails;
 
   constructor(private data: DataService, private country: CountryService) {}
 

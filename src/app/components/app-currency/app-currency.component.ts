@@ -9,7 +9,7 @@ import { CountryService } from "src/app/services/country.service";
 })
 export class AppCurrencyComponent implements OnInit {
   countryName: string;
-  public countrydetails = [];
+  public countrydetails;
 
   constructor(private data: DataService, private country: CountryService) {}
 

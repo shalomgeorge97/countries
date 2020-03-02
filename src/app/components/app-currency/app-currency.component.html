@@ -1,1 +1,19 @@
-<p>{{ countryName }}</p>
+<!-- <p>{{ countryName }}</p> -->
+<table>
+  <tr>
+    <th>#</th>
+    <th>
+      Name
+    </th>
+    <th>Code</th>
+    <th>
+      Symbol
+    </th>
+  </tr>
+  <tr *ngFor="let cur of countrydetails.currencies; index as i">
+    <td>{{ i + 1 }}</td>
+    <td>{{ countrydetails ? cur.name : null }}</td>
+    <td>{{ countrydetails ? cur.code : null }}</td>
+    <td>{{ countrydetails ? cur.symbol : null }}</td>
+  </tr>
+</table>

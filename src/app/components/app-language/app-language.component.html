@@ -1,9 +1,23 @@
-<!-- <p>{{ countrydetails.languages[0].name }}</p> -->
+<!-- {{ countrydetails ? countrydetails.language[0].name : null }} -->
+<!-- {{ countrydetails ? countrydetails.languages[0].name : null }} -->
 
-<!-- <div *ngFor="let count of countrydetails">
-  <ul *ngFor="let lang of count.languages">
-    <li>{{ lang.name }}</li>
-  </ul>
+<!-- <div *ngFor="let lang of countrydetails.languages">
+  <p>{{ countrydetails ? lang.name : null }}</p>
 </div> -->
 
-{{ countrydetails.name }}
+<table>
+  <tr>
+    <th>#</th>
+    <th>
+      Name
+    </th>
+    <th>
+      Native name
+    </th>
+  </tr>
+  <tr *ngFor="let lang of countrydetails.languages; index as i">
+    <td>{{ i + 1 }}</td>
+    <td>{{ countrydetails ? lang.name : null }}</td>
+    <td>{{ countrydetails ? lang.nativeName : null }}</td>
+  </tr>
+</table>
