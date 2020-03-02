@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, Component } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AppLanguageComponent } from "./components/app-language/app-language.component";
 import { AppHomeComponent } from "./components/app-home/app-home.component";
@@ -6,6 +6,11 @@ import { AppCurrencyComponent } from "./components/app-currency/app-currency.com
 import { AppPagenotfoundComponent } from "./components/app-pagenotfound/app-pagenotfound.component";
 
 const routes: Routes = [
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full"
+  },
   {
     path: "home",
     component: AppHomeComponent

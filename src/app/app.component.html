@@ -15,12 +15,12 @@
     name="country"
     list="countryname"
     [(ngModel)]="countryName"
+    (change)="onSelect(countryName)"
   />
   <datalist id="countryname">
-    <option
-      *ngFor="let country of countrylist"
-      [value]="country.alpha3Code + '- ' + country.name"
-    ></option>
+    <option *ngFor="let country of countrylist" [value]="country.alpha3Code">
+      {{ country.name }}
+    </option>
   </datalist>
   {{ countryName }}
 
