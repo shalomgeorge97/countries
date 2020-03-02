@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CountryService } from "./country.service";
+import { CountryService } from "./services/country.service";
 // import { from } from "rxjs";
 import { DataService } from "./services/data.service";
 

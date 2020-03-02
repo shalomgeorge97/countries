@@ -1,1 +1,38 @@
-<p>app-home works!</p>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>{{ countrydetails ? countrydetails.name : null }}</td>
+  </tr>
+  <tr>
+    <td>Flag</td>
+    <td>
+      <img
+        [src]="countrydetails ? countrydetails.flag : null"
+        alt=""
+        width="30%"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td>Captial</td>
+    <td>{{ countrydetails ? countrydetails.capital : null }}</td>
+  </tr>
+  <tr>
+    <td>Region</td>
+    <td>{{ countrydetails ? countrydetails.region : null }}</td>
+  </tr>
+  <tr>
+    <td>Sub region</td>
+    <td>{{ countrydetails.subregion }}</td>
+  </tr>
+  <tr>
+    <td>Population</td>
+    <td>{{ countrydetails.population }}</td>
+  </tr>
+  <tr>
+    <td>Area</td>
+    <td>{{ countrydetails.area }} sq km</td>
+  </tr>
+</table>
+
+{{ countrydetails[0] }}
