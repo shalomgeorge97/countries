@@ -6,11 +6,7 @@
   <tr>
     <td>Flag</td>
     <td>
-      <img
-        [src]="countrydetails ? countrydetails.flag : null"
-        alt=""
-        width="30%"
-      />
+      <img [src]="countrydetails?.flag" alt="" width="30%" />
     </td>
   </tr>
   <tr>
@@ -31,6 +27,6 @@
   </tr>
   <tr>
     <td>Area</td>
-    <td>{{ countrydetails ? countrydetails.area : null }} sq km</td>
+    <td>{{ countrydetails?.area }} sq km</td>
   </tr>
 </table>

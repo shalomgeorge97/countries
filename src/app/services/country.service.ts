@@ -2,6 +2,8 @@ import { Injectable, ErrorHandler } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { ICountries, ICountry } from "../shared/interfaces";
+import { catchError } from "rxjs/operators";
+
 // import "rxjs/add/operator/catch";
 // import "rxjs/add/operator/throw";
 
@@ -17,8 +19,9 @@ export class CountryService {
   constructor(private http: HttpClient) {}
 
   getCountries(): Observable<ICountries[]> {
-    return this.http.get<ICountries[]>(this._countriesurl);
-    // .catch(this.errorHandler);
+    return this.http
+      .get<ICountries[]>(this._countriesurl)
+      .pipe(catchError(this.errorHandler));
   }
 
   getCountry(code): Observable<ICountry> {

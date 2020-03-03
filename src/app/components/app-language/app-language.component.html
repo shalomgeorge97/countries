@@ -15,7 +15,7 @@
       Native name
     </th>
   </tr>
-  <tr *ngFor="let lang of countrydetails.languages; index as i">
+  <tr *ngFor="let lang of countrydetails?.languages; index as i">
     <td>{{ i + 1 }}</td>
     <td>{{ countrydetails ? lang.name : null }}</td>
     <td>{{ countrydetails ? lang.nativeName : null }}</td>
