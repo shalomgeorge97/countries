@@ -13,7 +13,7 @@
   <tr *ngFor="let cur of countrydetails?.currencies; index as i">
     <td>{{ i + 1 }}</td>
     <td>{{ cur?.name }}</td>
-    <td>{{ countrydetails ? cur.code : null }}</td>
+    <td>{{ cur?.code }}</td>
     <td>{{ countrydetails ? cur.symbol : null }}</td>
   </tr>
 </table>
